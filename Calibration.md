@@ -1,11 +1,9 @@
 - [Flow rate](#Flow-rate)
-
-
-- [Pressure Advance](#Pressure-Advance)  
+- [Pressure Advance](#Pressure-Advance)
   1. [Line method](#Line-method)
   2. [Tower method](#Tower-method)
 
-## Flow rate
+# Flow rate
 ![flowrate](https://user-images.githubusercontent.com/103989404/210137579-3fd141ad-f2da-4542-a1fd-fc4b4d673908.gif)
 Flow rate calibration is a two-pass process.
 Steps 
@@ -23,14 +21,14 @@ Steps
 ![-6](https://user-images.githubusercontent.com/103989404/210139131-ee224146-b242-4c1c-ac96-35ef0ca591f1.jpg)
 ![image](https://user-images.githubusercontent.com/103989404/210139721-919be130-fbba-4e3a-aa58-8a563e8c7792.png)
 
-## Pressure Advance
+# Pressure Advance
 I provide two approaches to calibrating PA. Each method has its own Pros and Cons.
 
 ### Line method
 The line method is quick and straightforward to test. However, its accuracy highly depends on your first layer quality. Make you turn on your bed mesh for this test.
 Steps:
   1. Select the printer/filament/process you want to use for the calibration.
-  2. Print and check the result. Choose the value of the most uniform line and update your PA value in the filament setting.
+  2. Print and check the result. You can choose the value of the most uniform line and update your PA value in the filament setting.
   3. In this test, `0.016` looks optimal. 
 ![pa_line](https://user-images.githubusercontent.com/103989404/210139630-8fd189e7-aa6e-4d03-90ab-84ab0e781f81.gif)
 
@@ -40,7 +38,20 @@ Steps:
 ![image](https://user-images.githubusercontent.com/103989404/210140079-61a4aba4-ae01-4988-9f8e-2a45a90cdb7d.png)
 
 ### Tower method
+The tower method takes slightly longer, but it's not affected by first-layer quality.
+The PA value will be increased by 0.002 for every 1 mm increase in height in this test.
+Steps:
+ 1. Select the printer/filament/process you want to use for the calibration.
+ 2. Check each corner of the print. Mark the height that gives the best overall result.
+ 3. In this case, I chose 8 mm. So the PA value should be `0.002x8 = 0.016`
+![tower](https://user-images.githubusercontent.com/103989404/210140231-e886b98d-280a-4464-9781-c74ed9b7d44e.jpg)
+
+![tower_measure](https://user-images.githubusercontent.com/103989404/210140232-885b549b-e3b8-46b9-a24c-5229c9182408.jpg)
 
 
-
+***
+*Credits:*  
+- *Flowrate test is inspired by [SuperSlicer](https://github.com/supermerill/SuperSlicer)*  
+- *PA Line method is inspired by [K-factor Calibration Pattern](https://marlinfw.org/tools/lin_advance/k-factor.html)*     
+- *PA Tower method is inspired by [Klipper](https://www.klipper3d.org/Pressure_Advance.html)*
 
