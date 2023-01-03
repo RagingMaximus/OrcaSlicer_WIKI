@@ -3,6 +3,7 @@
   1. [Line method](#Line-method)
   2. [Tower method](#Tower-method)
 
+**NOTE**: After completing the calibration process, remember to create a new project in order to exit the calibration mode.
 # Flow rate
 ![flowrate](https://user-images.githubusercontent.com/103989404/210137579-3fd141ad-f2da-4542-a1fd-fc4b4d673908.gif)
 Calibrating the flow rate involves a two-step process.  
