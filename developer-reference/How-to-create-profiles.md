@@ -141,7 +141,7 @@ The following sample JSON file shows how to create a new generic filament profil
 > 1. **Access the configuration folder**: Go to **Help** → **Show Configuration Folder**
 >    ![Help menu](https://github.com/SoftFever/OrcaSlicer/blob/main/doc/images/develop/go-to-configuration-folder.jpeg?raw=true)
 > 2. **Clear the cache**: Delete the `system` folder to remove cached profiles
->    ![Delete system folder](https://github.com/SoftFever/OrcaSlicer/blob/main/doc/images/develop/profile_delete_system_folder.jpeg?raw=true)
+>    ![Delete system folder](https://github.com/SoftFever/OrcaSlicer/blob/main/doc/images/develop/profile-delete-system-folder.jpeg?raw=true)
 > 3. **Restart OrcaSlicer**: Launch the application to load your updated profiles
 > This process forces OrcaSlicer to update its profile cache from the source files in the `resources/profiles/` directory.
 
