@@ -27,17 +27,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
 
-      # 1. Clone the current wiki master branch to a folder named `tmp_wiki`
+      # Publish content to wiki
       - name: Pull content from wiki
+        working-directory: ${{ github.workspace }}/..
         run: |
           git config --global user.name "$USER_NAME"
           git config --global user.email "$USER_NAME"@users.noreply.github.com
           git clone https://"$USER_TOKEN"@github.com/"$OWNER"/"$REPOSITORY_NAME".wiki.git tmp_wiki
-      # 4. Synchronize differences between `doc` & `tmp_wiki`
-      # 5. Push new Wiki content
-      - name: Push main repo content to wiki
-        run: |
-          rsync -av --delete doc/ tmp_wiki/ --exclude .git
+          rsync -av --delete ${{ github.workspace }} tmp_wiki/ --exclude .git
           cd tmp_wiki
           git add .
           git commit -m "Updated Wiki content" 
